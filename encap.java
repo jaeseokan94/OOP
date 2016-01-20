@@ -18,22 +18,36 @@ class Data{
 		System.out.println("Study stats, distributed system, database");
 	}
 }
-
-
-class dataEngineer {
+class DataEngineer {
 	
-	public void learnJava(Java module){module.learn();}
-	public void learnR(R module){module.learn();}
-	public void learnData(Data module){module.learn();}
+	Java java;
+	R r;
+	Data data;
+	
+	public DataEngineer(){
+		java = new Java();
+		r = new R();
+		data = new Data();
+	}
+	
+	public void learn(){
+		java.learn();
+		r.learn();
+		data.learn();
+	}
+}
+
+class Student {
+	public void learnDataEngineering(DataEngineer go){
+		go.learn();
+	};
 }
 
 public class encap {
-
+	
 	public static void main(String[] args) {
-		dataEngineer training = new dataEngineer();
-		training.learnJava(new Java());
-		training.learnR(new R());
-		training.learnData(new Data());
+		Student jaeseok = new Student(); 
+		jaeseok.learnDataEngineering(new DataEngineer());
 
 	}
 
