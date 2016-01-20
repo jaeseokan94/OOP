@@ -1,4 +1,5 @@
 package OOP;
+// I buy from fruit seller
 
  class FruitBuyer{
 	
