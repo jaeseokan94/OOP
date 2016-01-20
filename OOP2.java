@@ -28,6 +28,10 @@ package OOP;
 		
 		me.buyApple(someone, 2000);
 		someone.showResult();
+		
+		FruitSeller constructorToInitialize = new FruitSeller();
+		constructorToInitialize.showResult();
+		
 	}
 
 }
@@ -36,9 +40,14 @@ package OOP;
 
 	 final int applePrice = 1000; 
 	 
-	 int numOfApple = 20 ; 
-	 int numOfOrange = 10 ;
-	 int sellerMoney = 50000 ;
+	 private int numOfApple ; 
+	 private int sellerMoney ;
+	 	 
+	 
+	 public FruitSeller(){
+		numOfApple = 50;
+		sellerMoney = 50000;
+	 }
 	 
 	 public int saleApple(int money){
 		 numOfApple -= money/applePrice;	 
