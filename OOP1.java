@@ -3,7 +3,7 @@ package OOP;
 public class OOP1 {
 
 
-	 static int tenToTwo (int n){
+	 int tenToTwo (int n){
 		 if(n>0){
 			 int tmp;
 		    tmp = n%2;
