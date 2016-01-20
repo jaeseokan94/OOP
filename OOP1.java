@@ -1,5 +1,5 @@
 package OOP;
-
+// change decimal number to binary number
 public class OOP1 {
 
 
