@@ -21,16 +21,15 @@ public class array {
 		return min;
 	}
 
-	
-	
 	public static void main(String[] args) {
 	 
-		int arr[] = new int[10];
+		int arr[] = new int[9];
 		
 		sc = new Scanner(System.in);
 		
-		for(int i = 0 ; i < arr.length ; i++ ){
+		for(int i = 0 ; i < Math.sqrt(arr.length)*3 ; i++ ){
 		arr[i]=	sc.nextInt();
+		System.out.println(arr[i]);
 
 		}
 		
