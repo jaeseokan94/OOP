@@ -2,6 +2,7 @@ package OOP;
 
 
 class SimpleNumber{
+	
 	int num = 0 ;
 	private SimpleNumber(){}
 	public void addNumb(int n){num+=n;}
