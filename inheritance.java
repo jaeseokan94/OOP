@@ -1,5 +1,22 @@
 package OOP;
 
+class car{
+	int casolineGauge;
+}
+
+class HybridCar extends car{
+	int electricGauge;
+}
+
+class HybridWaterCar extends HybridCar{
+int waterGauge;
+
+public void showCurrentGauge(){
+	
+}
+
+}
+
 public class inheritance {
 
 	
