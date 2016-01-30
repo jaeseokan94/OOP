@@ -20,23 +20,31 @@ public class array {
 	}
 		return min;
 	}
-/*
-private static int[][] transform (int[][] array){
-		
-	for(int i = 0 ; i < 3 ; i++)for(int j = 0 ; j < 3 ; j ++){
-	if(i==1&&i==0){
-		i=i+1;
-	}else if (i==2){
-		i = 0;
-	}
-	}		
-	
-	for(int i = 0 ; i < 3 ; i++)for(int j = 0 ; j < 3 ; j ++){
 
-	System.out.println(array);}
-		return array;
+private static void transform (int[][] array2){
+	
+	int lastLow[] = array2[array2.length-1];
+	
+	for(int low=array2.length-1; low>0;low--){
+		array2[low] = array2[low-1]; 
 	}
-	*/
+	array2[0] = lastLow;
+
+		
+	}
+	
+private static void show(int[][] array2){
+	for(int i = 0 ; i < array2.length-1; i++){for(int j = 0 ; j < array2.length-1; j++){	
+
+		System.out.print(array2[i][j]+" ");
+
+	}
+		
+	}
+	
+}
+
+
 	public static void main(String[] args) {
 	 
 		
@@ -64,11 +72,15 @@ private static int[][] transform (int[][] array){
 			System.out.println(minValue(arr));
 		}
 		else{
-			int arr[][] = new int[3][3];
-			for(int i = 0 ; i < 3 ; i++)for(int j = 0 ; j < 3 ; j ++){
-			arr[i][j] = sc.nextInt();
-			}
-			System.out.println(arr+"");
+			int array2[][] = {
+				{1,2,3},
+				{4,5,6},
+				{7,8,9},
+			};
+			
+			transform(array2);
+			show(array2);
+			
 		}
 		
 		
