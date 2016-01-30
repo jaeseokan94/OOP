@@ -34,12 +34,12 @@ private static void transform (int[][] array2){
 	}
 	
 private static void show(int[][] array2){
-	for(int i = 0 ; i < array2.length-1; i++){for(int j = 0 ; j < array2.length-1; j++){	
+	for(int i = 0 ; i < array2.length; i++){for(int j = 0 ; j < array2.length; j++){	
 
 		System.out.print(array2[i][j]+" ");
 
 	}
-		
+	System.out.println(" ");
 	}
 	
 }
