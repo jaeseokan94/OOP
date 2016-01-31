@@ -6,10 +6,9 @@ public class array {
 
 	private static Scanner sc;
 	
-
 	private static int minValue(int[] array){
 	
-	int min =array[0]; 
+	int min = array[0]; 
 	
 	for(int i = 0 ; i<array.length; i ++){
 		int tmp = array[i];
@@ -22,22 +21,24 @@ public class array {
 	}
 
 private static void transform (int[][] array2){
+	int[] row = array2[array2.length-1];
 	
-	int lastLow[] = array2[array2.length-1];
-	
-	for(int low=array2.length-1; low>0;low--){
-		array2[low] = array2[low-1]; 
-	}
-	array2[0] = lastLow;
+	for(int i = array2.length-1; i==1; i --){
+		for(int j = 0 ;  j < array2.length-1; j ++){
+			System.out.print(array2[i][j]+" ");
 
-		
+		}		System.out.println("");
+
+	}
+	
+	array2[0] = row ;
+	
 	}
 	
 private static void show(int[][] array2){
 	for(int i = 0 ; i < array2.length; i++){for(int j = 0 ; j < array2.length; j++){	
 
 		System.out.print(array2[i][j]+" ");
-
 	}
 	System.out.println(" ");
 	}
@@ -49,11 +50,11 @@ private static void show(int[][] array2){
 	 
 		
 		
-		
+		System.out.println("Input Integer 1 or 2 to get a minimum integer from array of 9 integers ");
 		sc = new Scanner(System.in);
 		int a = sc.nextInt();
-		if(a==1){
-		
+		if(a==1){ 
+		System.out.println("Input 9 integers");
 		int arr[] = new int[9];
 		for(int i = 0 ; i < Math.sqrt(arr.length)*3 ; i++ ){
 		arr[i]=	sc.nextInt();
@@ -63,7 +64,7 @@ private static void show(int[][] array2){
 		System.out.println(minValue(arr));
 }
 		else if(a==2){
-			
+			System.out.println("Input 9 integers");
 			int arr[] = new int[9];
 			for(int e : arr){
 			arr[e]=	sc.nextInt();
@@ -79,6 +80,7 @@ private static void show(int[][] array2){
 			};
 			
 			transform(array2);
+			//transform(array2);
 			show(array2);
 			
 		}
